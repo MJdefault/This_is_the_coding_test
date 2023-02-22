@@ -9,12 +9,14 @@ dy = [1,-1,1,-1,2,2,-2,-2]
 nx = x
 ny = y
 
-while 1 <= ny and ny <= 8 and nx >= ord('a') and nx <= ord('h'):
+while True:
     for i in range(len(dx)):
         nx = x + dx[i]
         ny = y + dy[i]
         print(chr(nx), ny)
         if 1 <= ny and ny <= 8 and nx >= ord('a') and nx <= ord('h'):
             cnt += 1
+    else:
+        break
     
 print(cnt)
