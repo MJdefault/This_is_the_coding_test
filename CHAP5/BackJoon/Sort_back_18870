@@ -1,0 +1,15 @@
+n = int(input())
+
+array = list(map(int, input().split()))
+
+sorted_array = sorted(set(array))
+
+for i in range(n):
+    found = sorted_array.index(array[i])
+    print(found, end=' ')
+
+##################################################
+dic = {sorted_array[i]:i for i in range (len(sorted_array))}
+
+for i in array:
+  print(dic[i],end=' ')
